@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharmik Gajjar - Resume</title>
+    <!-- Favicon -->
+    <link class="favicon" rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
+    <style>
+        :root {
+            --primary: #1e293b;
+            --secondary: #475569;
+            --accent: #2563eb;
+            --bg: #ffffff;
+            --text: #0f172a;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.5;
+            color: var(--text);
+            background-color: #f1f5f9;
+            padding: 40px 20px;
+        }
+
+        .resume-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg);
+            padding: 40px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            border-radius: 8px;
+            position: relative;
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        .header-title {
+            font-size: 2.25rem;
+            color: var(--primary);
+            font-weight: 800;
+            letter-spacing: -0.025em;
+        }
+
+        .header-subtitle {
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 8px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: var(--secondary);
+        }
+
+        .contact-info a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        section h2 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .summary {
+            font-size: 0.95rem;
+            color: var(--secondary);
+            text-align: justify;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .skill-category {
+            font-size: 0.9rem;
+        }
+
+        .skill-category strong {
+            color: var(--primary);
+        }
+
+        .timeline-item {
+            margin-bottom: 15px;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--primary);
+        }
+
+        .timeline-sub {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .timeline-date {
+            font-weight: normal;
+            font-size: 0.85rem;
+            color: var(--secondary);
+        }
+
+        .timeline-details {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            margin-left: 15px;
+        }
+
+        .timeline-details li {
+            margin-bottom: 3px;
+        }
+
+        .project-item {
+            margin-bottom: 20px;
+        }
+
+        .project-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--primary);
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .project-tech {
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .project-desc {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            margin-bottom: 6px;
+        }
+
+        .project-contrib {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            margin-left: 18px;
+        }
+
+        .project-contrib li {
+            margin-bottom: 2px;
+        }
+
+        .certifications-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 12px;
+        }
+
+        .cert-item {
+            font-size: 0.9rem;
+        }
+
+        .cert-item strong {
+            color: var(--primary);
+            display: block;
+        }
+
+        .cert-item span {
+            color: var(--secondary);
+            font-size: 0.85rem;
+        }
+
+        .actions {
+            max-width: 800px;
+            margin: 0 auto 15px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn {
+            background-color: var(--accent);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+        }
+
+        .btn-secondary:hover {
+            background-color: #334155;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .resume-container {
+                box-shadow: none;
+                padding: 0;
+                border-radius: 0;
+            }
+            .actions {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="actions">
+        <a href="index.html" class="btn btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            Back to Portfolio
+        </a>
+        <button onclick="window.print()" class="btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            Print to PDF / Save
+        </button>
+    </div>
+
+    <div class="resume-container">
+        <header>
+            <h1 class="header-title">Dharmik Gajjar</h1>
+            <p class="header-subtitle">B.Tech in Computer Science & Engineering (AI / ML)</p>
+            <div class="contact-info">
+                <div>📍 Vadodara, Gujarat - 390012</div>
+                <div>📞 +91 83470-28187</div>
+                <div>✉️ <a href="mailto:dharmikrgajjar088@gmail.com">dharmikrgajjar088@gmail.com</a></div>
+                <div>🌐 <a href="https://www.linkedin.com/in/dharmik-r-gajjar-14110325p" target="_blank">linkedin.com/in/dharmik-r-gajjar-14110325p</a></div>
+                <div>💻 <a href="https://github.com/Dharmik-1403" target="_blank">github.com/Dharmik-1403</a></div>
+            </div>
+        </header>
+
+        <section>
+            <h2>Summary</h2>
+            <p class="summary">
+                I am Dharmik Gajjar, a dynamic and ambitious 2nd-year B.Tech Computer Science and Engineering student at GSFC University, with a core specialization in Artificial Intelligence and Machine Learning (AI/ML). I am passionate about utilizing data to solve complex problems and build intelligent systems.
+            </p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span>GSFC University</span>
+                    <span class="timeline-date">June 2024 - May 2027</span>
+                </div>
+                <div class="timeline-sub">
+                    <span>Bachelor of Engineering (B.Tech) - Computer Science (AI/ML)</span>
+                    <span class="timeline-date">Current Study</span>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span>Parul University</span>
+                    <span class="timeline-date">May 2019 - May 2022</span>
+                </div>
+                <div class="timeline-sub">
+                    <span>Diploma in Computer Science & Engineering</span>
+                    <span class="timeline-date">CGPA: 7.29 / 10</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <strong>Languages:</strong> Java, Python, C++
+                </div>
+                <div class="skill-category">
+                    <strong>Backend:</strong> Django, MySQL, MongoDB
+                </div>
+                <div class="skill-category">
+                    <strong>Frontend:</strong> HTML, CSS, JavaScript, ReactJS, AngularJS
+                </div>
+                <div class="skill-category">
+                    <strong>App Development:</strong> Flutter
+                </div>
+                <div class="skill-category">
+                    <strong>AI Technologies:</strong> Gemini API, ChatGPT, MS Copilot, Blackbox AI
+                </div>
+                <div class="skill-category">
+                    <strong>Developer Tools:</strong> VS Code, GitHub, Firebase
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            
+            <div class="project-item">
+                <div class="project-title">
+                    <span>AI Meal-Planner</span>
+                    <span class="timeline-date">Jan 2025</span>
+                </div>
+                <div class="project-tech">AngularJS, Gemini API, MongoDB, MEAN stack</div>
+                <p class="project-desc">
+                    AI-driven meal planner generating personalized, nutritionally balanced plans. Utilizes Gemini API's multimodal features to generate custom meal images. Responsive Single Page Application (SPA).
+                </p>
+                <ul class="project-contrib">
+                    <li>Engineered and implemented core server-side logic and API endpoints to communicate with AngularJS frontend and Gemini API.</li>
+                    <li>Designed NoSQL database schema, configured MongoDB instances, and managed user authentication data.</li>
+                    <li>Identified and resolved full-stack bugs, focusing on API integration and DB connectivity.</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">
+                    <span>Campus Navigation System</span>
+                    <span class="timeline-date">Jan 2025 - May 2025</span>
+                </div>
+                <div class="project-tech">Java, SWING (GUI), Flutter, Python, Firebase, MySQL</div>
+                <p class="project-desc">
+                    A navigation tool providing GPS-based real-time tracking, searchable maps with markers, and route recommendations across campus. Supported on both Desktop (Java Swing) and Mobile (Flutter).
+                </p>
+                <ul class="project-contrib">
+                    <li>Developed mobile user interfaces using Flutter, integrating interactive Google Maps features.</li>
+                    <li>Built backend route calculation services using Python algorithms.</li>
+                    <li>Implemented fast search and filter algorithms for building markers, and integrated Firebase for database synchronization and authentication.</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">
+                    <span>Blood Bank Management System</span>
+                    <span class="timeline-date">June 2021 - Jan 2022</span>
+                </div>
+                <div class="project-tech">Java, PHP, HTML, CSS, MySQL</div>
+                <p class="project-desc">
+                    Comprehensive blood donation and distribution platform. Facilitates donor registration, tracks live blood inventory, enables blood group request searches, and includes an admin dashboard with notification systems.
+                </p>
+                <ul class="project-contrib">
+                    <li>Designed responsive frontend layouts and built the backend database logic.</li>
+                    <li>Created secure database interactions for storing sensitive medical and personal user data.</li>
+                    <li>Optimized search filters for blood availability and set up role-based access controls for hospitals and admins.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Certifications & Achievements</h2>
+            <div class="certifications-list">
+                <div class="cert-item">
+                    <strong>Python Course</strong>
+                    <span>Cloud Computing, AWS Services, and Cloud Deployment</span>
+                </div>
+                <div class="cert-item">
+                    <strong>Networking Basics</strong>
+                    <span>TCP/IP, Network Protocols, Routing and Switching</span>
+                </div>
+                <div class="cert-item">
+                    <strong>AI Learning & Cybersecurity</strong>
+                    <span>Fundamentals, Threat Analysis, and Data Protection</span>
+                </div>
+                <div class="cert-item">
+                    <strong>Hackathons & Innovation</strong>
+                    <span>Problem Solving, Team Collaboration, and Rapid Prototyping</span>
+                </div>
+                <div class="cert-item">
+                    <strong>Personality Development</strong>
+                    <span>Leadership qualities, public presentation, and guiding skills</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharmik Gajjar | Portfolio - AI & ML Engineer & Developer</title>
+    <meta name="description" content="Portfolio of Dharmik Gajjar, a B.Tech Computer Science student specializing in Artificial Intelligence, Machine Learning, and Full-Stack Software Development.">
+    <!-- Google Fonts: Outfit (Brand & Headings), Fira Code (Terminal & Code elements), Inter (Body Text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Coding Background Canvas -->
+    <canvas id="coding-bg"></canvas>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="header-container container">
+            <a href="#home" class="logo" id="logo-brand">
+                <span class="logo-bracket">&lt;</span>Dharmik<span class="logo-dot">.</span>Gajjar <span class="logo-bracket">/&gt;</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+
+                <!-- Resume Download Menu Dropdown -->
+                <div class="dropdown" id="resume-dropdown">
+                    <button class="btn btn-primary dropdown-toggle" id="download-cv-btn">
+                        <span>Download CV</span> <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu" id="resume-dropdown-menu">
+                        <a href="resume.html" target="_blank" class="dropdown-item">
+                            <i class="fa-solid fa-file-pdf"></i> View & Print PDF
+                        </a>
+                        <a href="#" id="download-md-cv" class="dropdown-item">
+                            <i class="fa-brands fa-markdown"></i> Download Markdown CV
+                        </a>
+                        <a href="#" id="download-txt-cv" class="dropdown-item">
+                            <i class="fa-solid fa-file-lines"></i> Download Plain Text CV
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars menu-open"></i>
+                    <i class="fa-solid fa-xmark menu-close"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-container container">
+                <div class="hero-content">
+                    <span class="hero-badge"><i class="fa-solid fa-circle-nodes"></i> Specializing in AI / ML</span>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="glow-text">Dharmik Gajjar</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        I build <span id="typewriter-text"></span><span class="typewriter-cursor">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        A dynamic and ambitious Computer Science & Engineering student at GSFC University, focused on Artificial Intelligence, Machine Learning, and building scalable full-stack applications.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span> <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Get In Touch</span> <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Interactive Coding Terminal Emulator -->
+                <div class="terminal-wrapper">
+                    <div class="terminal-header-bar">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-title">dharmik@gsfc-uni: ~/portfolio</div>
+                        <div class="terminal-action-icons">
+                            <i class="fa-solid fa-minus"></i>
+                            <i class="fa-regular fa-square"></i>
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                    <div class="terminal-body" id="terminal-body">
+                        <div class="terminal-line text-comment">// Welcome to Dharmik's interactive terminal!</div>
+                        <div class="terminal-line text-comment">// Type 'help' to see list of available commands.</div>
+                        <div class="terminal-line text-info">guest@dharmik-portfolio:~$ <span class="terminal-auto-type">cat welcome.txt</span></div>
+                        <div class="terminal-output">
+                            <span class="text-accent">Dharmik Gajjar - B.Tech CSE (AI/ML)</span><br>
+                            -------------------------------------------<br>
+                            Current Study: GSFC University, Vadodara<br>
+                            Passionate about utilizing data to solve complex problems and build intelligent systems.<br>
+                        </div>
+                        <div class="terminal-input-container">
+                            <span class="terminal-prompt">guest@dharmik-portfolio:~$</span>
+                            <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="Type a command...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <a href="#about" aria-label="Scroll to About Me">
+                    <span class="mouse-icon">
+                        <span class="wheel"></span>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-sub">Who I Am</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-info-card glass-panel">
+                        <div class="about-profile-header">
+                            <div class="profile-avatar">
+                                <i class="fa-solid fa-code-branch avatar-icon"></i>
+                            </div>
+                            <div>
+                                <h3>Dharmik Gajjar</h3>
+                                <p>B.Tech CSE Student (AI-ML Specialized)</p>
+                            </div>
+                        </div>
+                        <p class="about-text">
+                            I am a dynamic, ambitious second-year B.Tech student in Computer Science & Engineering with a core specialization in AI and Machine Learning. I enjoy bridging the gap between raw data analysis and practical application logic.
+                        </p>
+                        <p class="about-text">
+                            With solid foundations in Java, Python, and web development (including Django, React, and AngularJS), I love building responsive user interfaces, robust database systems, and integrating intelligent APIs like Google Gemini.
+                        </p>
+                        <div class="about-details-list">
+                            <div class="detail-item">
+                                <span class="detail-label">Location:</span>
+                                <span class="detail-value">Vadodara, Gujarat, India</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Email:</span>
+                                <span class="detail-value"><a href="mailto:dharmikrgajjar088@gmail.com">dharmikrgajjar088@gmail.com</a></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Languages:</span>
+                                <span class="detail-value">English, Hindi, Gujarati</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Timeline Card -->
+                    <div class="about-education glass-panel">
+                        <h3 class="about-subtitle"><i class="fa-solid fa-graduation-cap"></i> Education Timeline</h3>
+                        <div class="timeline">
+                            <div class="timeline-card">
+                                <div class="timeline-marker">
+                                    <div class="timeline-dot"></div>
+                                </div>
+                                <div class="timeline-content">
+                                    <span class="timeline-period">2024 - 2027</span>
+                                    <h4>Bachelor of Engineering (B.Tech)</h4>
+                                    <h5>GSFC University, Vadodara</h5>
+                                    <p class="timeline-text">
+                                        Computer Science and Engineering with a core specialization in Artificial Intelligence and Machine Learning (AI/ML). Currently in 2nd year.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline-card">
+                                <div class="timeline-marker">
+                                    <div class="timeline-dot"></div>
+                                </div>
+                                <div class="timeline-content">
+                                    <span class="timeline-period">2019 - 2022</span>
+                                    <h4>Diploma in Computer Science & Eng.</h4>
+                                    <h5>Parul University, Vadodara</h5>
+                                    <p class="timeline-text">
+                                        Completed formal diploma coursework with hands-on labs in structured programming, relational databases, and data structures. Achieved a CGPA of 7.29/10.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-sub">What I Can Do</span>
+                    <h2 class="section-title">Technical Expertise</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="skills-grid-layout">
+                    <!-- Languages -->
+                    <div class="skill-category-card glass-panel">
+                        <div class="skill-header">
+                            <div class="skill-icon-box"><i class="fa-solid fa-terminal"></i></div>
+                            <h3>Languages</h3>
+                        </div>
+                        <ul class="skill-tags">
+                            <li><span class="tech-tag">Java</span></li>
+                            <li><span class="tech-tag">Python</span></li>
+                            <li><span class="tech-tag">C++</span></li>
+                            <li><span class="tech-tag">SQL</span></li>
+                            <li><span class="tech-tag">HTML5 / CSS3</span></li>
+                            <li><span class="tech-tag">JavaScript (ES6+)</span></li>
+                            <li><span class="tech-tag">PHP</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- AI & Data -->
+                    <div class="skill-category-card glass-panel">
+                        <div class="skill-header">
+                            <div class="skill-icon-box"><i class="fa-solid fa-brain"></i></div>
+                            <h3>AI & Technologies</h3>
+                        </div>
+                        <ul class="skill-tags">
+                            <li><span class="tech-tag">Gemini API Integration</span></li>
+                            <li><span class="tech-tag">Generative AI</span></li>
+                            <li><span class="tech-tag">Prompt Engineering</span></li>
+                            <li><span class="tech-tag">ChatGPT & Copilot</span></li>
+                            <li><span class="tech-tag">Blackbox AI & Gamma</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Backend Dev -->
+                    <div class="skill-category-card glass-panel">
+                        <div class="skill-header">
+                            <div class="skill-icon-box"><i class="fa-solid fa-server"></i></div>
+                            <h3>Backend & DBs</h3>
+                        </div>
+                        <ul class="skill-tags">
+                            <li><span class="tech-tag">Django</span></li>
+                            <li><span class="tech-tag">NodeJS</span></li>
+                            <li><span class="tech-tag">MySQL</span></li>
+                            <li><span class="tech-tag">MongoDB</span></li>
+                            <li><span class="tech-tag">RESTful APIs</span></li>
+                            <li><span class="tech-tag">Firebase DB</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Frontend & Apps -->
+                    <div class="skill-category-card glass-panel">
+                        <div class="skill-header">
+                            <div class="skill-icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+                            <h3>Frontend & Mobile</h3>
+                        </div>
+                        <ul class="skill-tags">
+                            <li><span class="tech-tag">ReactJS</span></li>
+                            <li><span class="tech-tag">AngularJS</span></li>
+                            <li><span class="tech-tag">Flutter UI Development</span></li>
+                            <li><span class="tech-tag">Java Swing (GUI)</span></li>
+                            <li><span class="tech-tag">Responsive Design</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Developer Tools -->
+                    <div class="skill-category-card glass-panel">
+                        <div class="skill-header">
+                            <div class="skill-icon-box"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                            <h3>Developer Tools</h3>
+                        </div>
+                        <ul class="skill-tags">
+                            <li><span class="tech-tag">Git & GitHub</span></li>
+                            <li><span class="tech-tag">VS Code</span></li>
+                            <li><span class="tech-tag">Firebase Auth</span></li>
+                            <li><span class="tech-tag">Postman</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="skill-category-card glass-panel">
+                        <div class="skill-header">
+                            <div class="skill-icon-box"><i class="fa-solid fa-users"></i></div>
+                            <h3>Soft Skills</h3>
+                        </div>
+                        <ul class="skill-tags">
+                            <li><span class="tech-tag">Team Collaboration</span></li>
+                            <li><span class="tech-tag">Problem Solving</span></li>
+                            <li><span class="tech-tag">Rapid Prototyping</span></li>
+                            <li><span class="tech-tag">Leadership Qualities</span></li>
+                            <li><span class="tech-tag">Photography & Videography</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects & Experience Section -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-sub">Portfolio Showcase</span>
+                    <h2 class="section-title">Projects & Experience</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <!-- Projects Filter Controls -->
+                <div class="projects-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="ai-ml">AI & ML</button>
+                    <button class="filter-btn" data-filter="web">Web Apps</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                    <button class="filter-btn" data-filter="desktop">Desktop GUI</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Project 1: AI Meal-Planner -->
+                    <div class="project-card glass-panel" data-category="ai-ml web">
+                        <div class="project-card-header">
+                            <div class="project-tag"><i class="fa-solid fa-brain"></i> AI & ML</div>
+                            <span class="project-date">Jan 2025</span>
+                        </div>
+                        <h3 class="project-card-title">AI Meal-Planner</h3>
+                        <p class="project-card-desc">
+                            An intelligent MEAN stack Single Page Application that builds personalized, nutritionally balanced meal schedules using the Gemini API.
+                        </p>
+                        <div class="project-card-tech">
+                            <span>AngularJS</span>
+                            <span>Gemini API</span>
+                            <span>NodeJS</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-features-list">
+                            <strong>Key Features:</strong>
+                            <ul>
+                                <li>AI-driven meal schedule generations matching user requirements.</li>
+                                <li>Multimodal image retrieval based on recipes.</li>
+                                <li>Flexible NoSQL MongoDB storage.</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-text open-project-modal" data-project="meal-planner">
+                            Read Contributions & Details <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </div>
+
+                    <!-- Project 2: Campus Navigation System -->
+                    <div class="project-card glass-panel" data-category="mobile desktop">
+                        <div class="project-card-header">
+                            <div class="project-tag"><i class="fa-solid fa-mobile-screen-button"></i> Mobile & Desktop</div>
+                            <span class="project-date">Jan - May 2025</span>
+                        </div>
+                        <h3 class="project-card-title">Campus Navigation System</h3>
+                        <p class="project-card-desc">
+                            A real-time GPS tracking and campus navigation map interface built with a Java Swing Desktop Admin portal and a mobile client.
+                        </p>
+                        <div class="project-card-tech">
+                            <span>Java Swing</span>
+                            <span>Flutter</span>
+                            <span>Python</span>
+                            <span>Firebase</span>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="project-features-list">
+                            <strong>Key Features:</strong>
+                            <ul>
+                                <li>GPS location markers and shortest route suggestions.</li>
+                                <li>Flutter client UI with Google Maps SDK.</li>
+                                <li>Synchronized Firebase database state.</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-text open-project-modal" data-project="campus-nav">
+                            Read Contributions & Details <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </div>
+
+                    <!-- Project 3: Blood Bank Management System -->
+                    <div class="project-card glass-panel" data-category="web">
+                        <div class="project-card-header">
+                            <div class="project-tag"><i class="fa-solid fa-globe"></i> Web Application</div>
+                            <span class="project-date">2021 - 2022</span>
+                        </div>
+                        <h3 class="project-card-title">Blood Bank Management</h3>
+                        <p class="project-card-desc">
+                            A responsive donor-recipient matchmaking management portal built during diploma courses to organize blood stock availability.
+                        </p>
+                        <div class="project-card-tech">
+                            <span>Java</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>HTML/CSS</span>
+                        </div>
+                        <div class="project-features-list">
+                            <strong>Key Features:</strong>
+                            <ul>
+                                <li>Secure donor registration and inventory logs.</li>
+                                <li>Donor notification system and filters for blood types.</li>
+                                <li>Admin panel analytics of blood units.</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-text open-project-modal" data-project="blood-bank">
+                            Read Contributions & Details <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="achievements-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-sub">My Milestones</span>
+                    <h2 class="section-title">Certifications & Achievements</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="achievements-grid">
+                    <!-- Cert 1 -->
+                    <div class="achievement-card glass-panel">
+                        <div class="achievement-icon"><i class="fa-brands fa-python"></i></div>
+                        <h3>Python Developer Course</h3>
+                        <p class="achievement-provider">Specialized Training</p>
+                        <p class="achievement-desc">
+                            Advanced Python scripting, data structures, and integrations with Cloud Computing, AWS services, and automated deployment architectures.
+                        </p>
+                    </div>
+
+                    <!-- Cert 2 -->
+                    <div class="achievement-card glass-panel">
+                        <div class="achievement-icon"><i class="fa-solid fa-network-wired"></i></div>
+                        <h3>Networking Basics</h3>
+                        <p class="achievement-provider">Fundamental Credentials</p>
+                        <p class="achievement-desc">
+                            In-depth coverage of TCP/IP parameters, domain DNS setups, routing protocols, subnets, switches, and basic firewall configurations.
+                        </p>
+                    </div>
+
+                    <!-- Cert 3 -->
+                    <div class="achievement-card glass-panel">
+                        <div class="achievement-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>AI Learning & Security</h3>
+                        <p class="achievement-provider">Cybersecurity Fundamentals</p>
+                        <p class="achievement-desc">
+                            Basics of data protection, threat calculations, security configurations for network systems, and AI models' vulnerability metrics.
+                        </p>
+                    </div>
+
+                    <!-- Cert 4 -->
+                    <div class="achievement-card glass-panel">
+                        <div class="achievement-icon"><i class="fa-solid fa-trophy"></i></div>
+                        <h3>Hackathon Participant</h3>
+                        <p class="achievement-provider">Problem Solving & Collaboration</p>
+                        <p class="achievement-desc">
+                            Participated in multiple rapid prototyping hackathons. Developed quick solutions, collaborated under high pressure, and pitch-presented working concepts.
+                        </p>
+                    </div>
+
+                    <!-- Cert 5 -->
+                    <div class="achievement-card glass-panel">
+                        <div class="achievement-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3>Personality Development</h3>
+                        <p class="achievement-provider">Leadership & Guiding Skills</p>
+                        <p class="achievement-desc">
+                            Refined professional communication, technical presentation, team motivation, conflict management, and group leadership qualities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-sub">Get In Touch</span>
+                    <h2 class="section-title">Contact Information</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Information Details -->
+                    <div class="contact-info-cards">
+                        <div class="contact-card glass-panel">
+                            <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <h3>Email Me</h3>
+                                <p><a href="mailto:dharmikrgajjar088@gmail.com" class="link-hover">dharmikrgajjar088@gmail.com</a></p>
+                                <button class="btn btn-copy" data-copy="dharmikrgajjar088@gmail.com"><i class="fa-regular fa-copy"></i> Copy</button>
+                            </div>
+                        </div>
+
+                        <div class="contact-card glass-panel">
+                            <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <h3>Call Me</h3>
+                                <p><a href="tel:+918347028187" class="link-hover">+91 83470-28187</a></p>
+                                <button class="btn btn-copy" data-copy="+918347028187"><i class="fa-regular fa-copy"></i> Copy</button>
+                            </div>
+                        </div>
+
+                        <div class="contact-card glass-panel">
+                            <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <h3>Location</h3>
+                                <p>Vadodara, Gujarat, India - 390012</p>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Connections -->
+                        <div class="social-connect glass-panel">
+                            <h3>Connect With Me</h3>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/dharmik-r-gajjar-14110325p" target="_blank" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://github.com/Dharmik-1403" target="_blank" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                                <a href="mailto:dharmikrgajjar088@gmail.com" aria-label="Send Email"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Card -->
+                    <div class="contact-form-card glass-panel">
+                        <h3>Send a Message</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="form-name">Name</label>
+                                <input type="text" id="form-name" required placeholder="Your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Email</label>
+                                <input type="email" id="form-email" required placeholder="Your email address">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-subject">Subject</label>
+                                <input type="text" id="form-subject" placeholder="What are you writing about?">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <textarea id="form-message" rows="5" required placeholder="Type your message here..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <a href="#home" class="logo">
+                    <span class="logo-bracket">&lt;</span>Dharmik<span class="logo-dot">.</span>Gajjar <span class="logo-bracket">/&gt;</span>
+                </a>
+                <p>B.Tech Computer Science & Engineering (AI/ML) Student</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dharmik Gajjar. All Rights Reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/dharmik-r-gajjar-14110325p" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Dharmik-1403" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:dharmikrgajjar088@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Detail Contribution Modals -->
+    <!-- Modal 1: AI Meal Planner -->
+    <div class="modal" id="modal-meal-planner">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <h3>AI Meal-Planner Project</h3>
+                <button class="modal-close" data-close="meal-planner">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-desc text-accent"><strong>Stack:</strong> AngularJS, Gemini API, NodeJS, MongoDB (MEAN principles)</p>
+                <div class="modal-section">
+                    <h4>Project Overview:</h4>
+                    <p>
+                        Developed a comprehensive Single Page Application (SPA) designed to build personalized meal plans matching dietary targets. Uses the Gemini API to analyze nutritional parameters and return appropriate visual assets dynamically.
+                    </p>
+                </div>
+                <div class="modal-section">
+                    <h4>Detailed Contributions & Focus:</h4>
+                    <ul>
+                        <li><strong>Backend API Engineering:</strong> Built the entire server structure responsible for handling incoming queries from the AngularJS client, formatting payloads, communicating with Gemini API services, and securely retrieving responses.</li>
+                        <li><strong>MongoDB Setup & Schema Design:</strong> Configured database schema structures to store authenticated users, preferences, generated meal plans, and historical logs.</li>
+                        <li><strong>Error Solving & Integration Debugging:</strong> Successfully analyzed connectivity glitches between the NodeJS server and Google AI endpoints, and patched state issues during rapid user updates.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Campus Nav -->
+    <div class="modal" id="modal-campus-nav">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <h3>Campus Navigation System Project</h3>
+                <button class="modal-close" data-close="campus-nav">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-desc text-accent"><strong>Stack:</strong> Java Swing (GUI), Flutter, Python, Firebase, MySQL</p>
+                <div class="modal-section">
+                    <h4>Project Overview:</h4>
+                    <p>
+                        Created a campus routing and locator tool. Includes a mobile client for real-time location mapping on building layers, and a desktop portal for campus administrators to upload coordinate datasets.
+                    </p>
+                </div>
+                <div class="modal-section">
+                    <h4>Detailed Contributions & Focus:</h4>
+                    <ul>
+                        <li><strong>Flutter UI & Map Layer:</strong> Programmed the visual dashboard of the mobile application using Flutter, implementing Google Maps coordinates mapping and marker integrations.</li>
+                        <li><strong>Python Pathing Calculations:</strong> Created backend route algorithms in Python to calculate distances and return path markers to the client application.</li>
+                        <li><strong>Firebase Syncing:</strong> Handled authentication state and database updates via Firebase so markers added via the desktop Java portal instantly refresh on mobile users' screens.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Blood Bank -->
+    <div class="modal" id="modal-blood-bank">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <h3>Blood Bank Management Project</h3>
+                <button class="modal-close" data-close="blood-bank">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-desc text-accent"><strong>Stack:</strong> Java, PHP, MySQL, HTML/CSS</p>
+                <div class="modal-section">
+                    <h4>Project Overview:</h4>
+                    <p>
+                        A platform built to manage donor records, verify blood inventory units across clinical groups, let hospitals submit blood request files, and automate SMS/email notifications for prospective donors.
+                    </p>
+                </div>
+                <div class="modal-section">
+                    <h4>Detailed Contributions & Focus:</h4>
+                    <ul>
+                        <li><strong>Full-Stack Architecture:</strong> Drafted the UI screens (HTML/CSS/JS) and wrote PHP files to execute queries against the local MySQL instance.</li>
+                        <li><strong>Secure Database Queries:</strong> Handled input sanitation and SQL validation routines to safeguard donor records and sensitive contact data.</li>
+                        <li><strong>Role Access Setup:</strong> Built credential verification routines separating options available to administrative bank staff, hospital doctors, and public users.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification for clipboard / form submission -->
+    <div class="toast" id="toast">Copied to clipboard!</div>
+
+    <!-- Form Success Modal -->
+    <div class="modal" id="modal-form-success">
+        <div class="modal-content glass-panel text-center">
+            <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out, Dharmik. He will get back to you as soon as possible.</p>
+            <button class="btn btn-primary" id="btn-success-close">Close</button>
+        </div>
+    </div>
+
+    <!-- Main JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
