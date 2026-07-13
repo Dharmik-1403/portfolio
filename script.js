@@ -203,12 +203,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const terminalCommands = {
         help: `
             <span class="text-accent">Available Commands:</span><br>
-            - <span class="text-info">bio</span>       : Summary about Dharmik<br>
-            - <span class="text-info">skills</span>    : Technical skill listings<br>
-            - <span class="text-info">education</span> : Educational background<br>
-            - <span class="text-info">projects</span>  : Key portfolio projects<br>
-            - <span class="text-info">contact</span>   : E-mail, phone & social link values<br>
-            - <span class="text-info">clear</span>     : Flush terminal logs
+            - <span class="text-info">bio</span>        : Summary about Dharmik<br>
+            - <span class="text-info">skills</span>     : Technical skill listings<br>
+            - <span class="text-info">education</span>  : Educational background<br>
+            - <span class="text-info">experience</span> : Work experience details<br>
+            - <span class="text-info">projects</span>   : Key portfolio projects<br>
+            - <span class="text-info">contact</span>    : E-mail, phone & social link values<br>
+            - <span class="text-info">clear</span>      : Flush terminal logs
         `,
         bio: `
             <span class="text-accent">Dharmik Gajjar - Bio Summary</span><br>
@@ -234,14 +235,24 @@ document.addEventListener("DOMContentLoaded", () => {
             • <span class="text-info">Diploma (Computer Science)</span> | 2019 - 2022 (Completed)<br>
               Parul University, Vadodara, Gujarat (CGPA: 7.29/10)
         `,
+        experience: `
+            <span class="text-accent">Work Experience History:</span><br>
+            --------------------------------------------<br>
+            • <span class="text-info">IT Intern / ML Developer</span> | June 1, 2026 - June 30, 2026<br>
+              GUVNL (Gujarat Urja Vikas Nigam Limited) - IT Department<br>
+              Analyzed power grid load datasets and implemented regression ML models in Python.<br>
+              Developed and deployed the "Smart Energy Forecasting" system live using Streamlit and Netlify.
+        `,
         projects: `
             <span class="text-accent">Key Projects Showcase:</span><br>
             --------------------------------------------<br>
-            1. <span class="text-info">AI Meal-Planner</span> (MEAN stack + Gemini API)<br>
+            1. <span class="text-info">Smart Energy Forecasting</span> (Python + Machine Learning)<br>
+               Grid load forecasting time-series web application. Live at: smart-energy-forecasting.netlify.app<br>
+            2. <span class="text-info">AI Meal-Planner</span> (MEAN stack + Gemini API)<br>
                Generates personalized healthy meal recommendations and matches image outputs.<br>
-            2. <span class="text-info">Campus Navigation System</span> (Java, Swing, Flutter, Python)<br>
+            3. <span class="text-info">Campus Navigation System</span> (Java, Swing, Flutter, Python)<br>
                GPS locations routing maps tool matching administrators coordinates to mobile clients.<br>
-            3. <span class="text-info">Blood Bank Management</span> (PHP, Java, MySQL)<br>
+            4. <span class="text-info">Blood Bank Management</span> (PHP, Java, MySQL)<br>
                Clinic donor records catalog, donor availability request slots.
         `,
         contact: `
@@ -341,17 +352,30 @@ I am Dharmik Gajjar, a dynamic and ambitious 2nd-year B.Tech Computer Science an
 
 ---
 
+## Work Experience
+### IT Intern / Machine Learning Developer | GUVNL (Gujarat Urja Vikas Nigam Limited) - IT Department
+* June 1, 2026 - June 30, 2026
+* Analyzed power grid load datasets and implemented regression ML models in Python.
+* Developed and deployed an interactive forecasting system dashboard live using Streamlit and Netlify.
+
+---
+
 ## Projects
-### 1. AI Meal-Planner (MEAN Stack + Gemini API)
+### 1. Smart Energy Forecasting (Python + Machine Learning + Streamlit)
+* An AI-powered load forecasting application predicting hourly electricity consumption.
+* Live Site: https://smart-energy-forecasting.netlify.app
+* **My Contribution**: Built regression algorithms in Python, engineered Streamlit dashboards, and automated Netlify deployments.
+
+### 2. AI Meal-Planner (MEAN Stack + Gemini API)
 * AI-driven meal planning generator with customized schedules matching nutritional targets.
 * Integrates multimodal Gemini API features to fetch and render meal image graphics.
 * **My Contribution**: Built core API server routes, handled data persistence structures inside MongoDB, and debugged REST endpoint connectivity.
 
-### 2. Campus Navigation System (Java Swing + Flutter + Python)
+### 3. Campus Navigation System (Java Swing + Flutter + Python)
 * GPS navigation and mapping system featuring route directions around a campus.
 * **My Contribution**: Developed mobile screens via Flutter (Google Maps SDK integration), coded distance calculations backend logic in Python, and synchronized credentials through Firebase DB.
 
-### 3. Blood Bank Management System (PHP + Java + MySQL)
+### 4. Blood Bank Management System (PHP + Java + MySQL)
 * Clinic dashboard tracking donor availability data, matching patient request slots.
 * **My Contribution**: Programmed the frontend layout forms, optimized database filters, and secured queries against injection.
 
@@ -396,14 +420,22 @@ TECHNICAL SKILLS:
 - AI Tools: Gemini API, ChatGPT, Copilot, Blackbox AI
 - Tools: VS Code, GitHub
 
+WORK EXPERIENCE:
+- IT Intern / ML Developer | GUVNL IT Department (1 June 2026 - 30 June 2026)
+  - Coded regression machine learning models in Python for load data forecasting.
+  - Built and deployed a web dashboard live using Streamlit and Netlify.
+
 PROJECTS:
-1. AI Meal-Planner (AngularJS, NodeJS, Gemini API, MongoDB)
+1. Smart Energy Forecasting (Python, Machine Learning, Streamlit, Netlify)
+   - Built hourly grid load forecast ML models. Live at smart-energy-forecasting.netlify.app.
+   - Programmed analytics interface displays and integrated cloud deployments.
+2. AI Meal-Planner (AngularJS, NodeJS, Gemini API, MongoDB)
    - Created full-stack meal generation engine, with image lookups.
    - Built backend API endpoints, configured database schemas, and resolved communication errors.
-2. Campus Navigation System (Java Swing, Flutter, Python, Firebase, MySQL)
+3. Campus Navigation System (Java Swing, Flutter, Python, Firebase, MySQL)
    - Designed real-time GPS routes navigation markers database.
    - Programmed Flutter mapping UI, built route calculation services, and synchronized authentication.
-3. Blood Bank Management System (Java, PHP, MySQL, CSS)
+4. Blood Bank Management System (Java, PHP, MySQL, CSS)
    - Built donor database matching patient request systems.
    - Programmed logic files and secured MySQL database queries.
 
@@ -490,6 +522,14 @@ CERTIFICATIONS:
             if (e.target.closest(".open-project-modal") || e.target.closest("a") || e.target.closest("button")) {
                 return;
             }
+
+            // Direct jump to live site if card has data-live-link
+            const liveLink = card.getAttribute("data-live-link");
+            if (liveLink) {
+                window.open(liveLink, "_blank");
+                return;
+            }
+
             const btn = card.querySelector(".open-project-modal");
             if (btn) {
                 const project = btn.getAttribute("data-project");

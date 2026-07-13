@@ -181,10 +181,23 @@
                         </div>
                     </div>
 
-                    <!-- Education Timeline Card -->
+                    <!-- Education & Experience Timeline Card -->
                     <div class="about-education glass-panel">
-                        <h3 class="about-subtitle"><i class="fa-solid fa-graduation-cap"></i> Education Timeline</h3>
+                        <h3 class="about-subtitle"><i class="fa-solid fa-business-time"></i> Timeline</h3>
                         <div class="timeline">
+                            <div class="timeline-card">
+                                <div class="timeline-marker">
+                                    <div class="timeline-dot"></div>
+                                </div>
+                                <div class="timeline-content">
+                                    <span class="timeline-period">June 1, 2026 - June 30, 2026</span>
+                                    <h4>IT Intern</h4>
+                                    <h5>GUVNL (Gujarat Urja Vikas Nigam Limited) - IT Department</h5>
+                                    <p class="timeline-text">
+                                        Worked on data analysis, software maintenance, and developed the "Smart Energy Forecasting" AI-driven load forecasting system.
+                                    </p>
+                                </div>
+                            </div>
                             <div class="timeline-card">
                                 <div class="timeline-marker">
                                     <div class="timeline-dot"></div>
@@ -342,6 +355,35 @@
 
                 <!-- Projects Grid -->
                 <div class="projects-grid" id="projects-grid">
+                    <!-- Project 0: Smart Energy Forecasting -->
+                    <div class="project-card glass-panel" data-category="ai-ml web" data-live-link="https://smart-energy-forecasting.netlify.app">
+                        <div class="project-card-header">
+                            <div class="project-tag"><i class="fa-solid fa-brain"></i> AI & ML</div>
+                            <span class="project-date">June 2026</span>
+                        </div>
+                        <h3 class="project-card-title">Smart Energy Forecasting</h3>
+                        <p class="project-card-desc">
+                            An AI-powered forecasting web application developed during my GUVNL internship to predict energy consumption and grid load metrics dynamically.
+                        </p>
+                        <div class="project-card-tech">
+                            <span>Python</span>
+                            <span>Machine Learning</span>
+                            <span>Streamlit</span>
+                            <span>Netlify</span>
+                        </div>
+                        <div class="project-features-list">
+                            <strong>Key Features:</strong>
+                            <ul>
+                                <li>Time-series load forecasting using ML regressions.</li>
+                                <li>Interactive dashboard for grid capacity visualization.</li>
+                                <li>Hosted live on Netlify for real-time inference.</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-text open-project-modal" data-project="energy-forecasting">
+                            Read Contributions & Details <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </div>
+
                     <!-- Project 1: AI Meal-Planner -->
                     <div class="project-card glass-panel" data-category="ai-ml web">
                         <div class="project-card-header">
@@ -601,6 +643,33 @@
     </button>
 
     <!-- Detail Contribution Modals -->
+    <!-- Modal 0: Smart Energy Forecasting -->
+    <div class="modal" id="modal-energy-forecasting">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <h3>Smart Energy Forecasting Project</h3>
+                <button class="modal-close" data-close="energy-forecasting">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-desc text-accent"><strong>Stack:</strong> Python, Machine Learning, Streamlit, Netlify, CSV Data Sources</p>
+                <div class="modal-section">
+                    <h4>Project Overview:</h4>
+                    <p>
+                        Developed an AI-powered forecasting web application during my GUVNL internship to predict energy consumption and load metrics of grid systems, optimizing storage and supply parameters.
+                    </p>
+                </div>
+                <div class="modal-section">
+                    <h4>Detailed Contributions & Focus:</h4>
+                    <ul>
+                        <li><strong>AI Model Development:</strong> Built and trained time-series machine learning models in Python to forecast electricity load/demand.</li>
+                        <li><strong>Web Interface Deployment:</strong> Built an interactive dashboard using Streamlit to display grid statistics, load graphs, and future load forecasts.</li>
+                        <li><strong>Live Deployment:</strong> Deployed the web interface live on Netlify for seamless public access and interaction.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal 1: AI Meal Planner -->
     <div class="modal" id="modal-meal-planner">
         <div class="modal-content glass-panel">
