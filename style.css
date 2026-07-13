@@ -844,6 +844,45 @@ body.light-theme .terminal-wrapper {
     color: var(--text-muted);
 }
 
+/* Work Experience Timeline details */
+.company-name {
+    font-size: 1rem;
+    color: var(--accent-blue);
+    margin-top: 4px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.company-name i {
+    font-size: 0.9rem;
+    margin-right: 6px;
+}
+
+.experience-bullets {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.experience-bullets li {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 20px;
+}
+
+.experience-bullets li::before {
+    content: '▪';
+    color: var(--accent-cyan);
+    position: absolute;
+    left: 4px;
+    font-size: 0.8rem;
+    top: 0px;
+}
+
 /* -------------------------------------------------------------
    SKILLS SECTION
    ------------------------------------------------------------- */
