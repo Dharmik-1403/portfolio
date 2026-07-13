@@ -570,18 +570,46 @@ CERTIFICATIONS:
             const subject = document.getElementById("form-subject").value;
             const message = document.getElementById("form-message").value;
 
-            // Log details (simulates sending database email triggers)
-            console.log("Contact Form Submission Logged:");
-            console.log(`From: ${name} (${email})`);
-            console.log(`Subject: ${subject}`);
-            console.log(`Content: ${message}`);
+            // Send form data asynchronously to user's email using FormSubmit API (free)
+            const submitBtn = contactForm.querySelector(".btn-submit");
+            const originalBtnHtml = submitBtn.innerHTML;
+            
+            // Change button state to "Sending..."
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<span>Sending...</span> <i class="fa-solid fa-spinner fa-spin"></i>`;
 
-            // Reset the fields
-            contactForm.reset();
-
-            // Trigger success screen overlay
-            formSuccessModal.classList.add("show");
-            body.style.overflow = "hidden";
+            fetch("https://formsubmit.co/ajax/dharmikrgajjar088@gmail.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    _subject: subject || "Portfolio Contact Form Submission",
+                    message: message
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Form successfully submitted:", data);
+                // Reset button state
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHtml;
+                // Reset the fields
+                contactForm.reset();
+                // Trigger success screen overlay modal
+                formSuccessModal.classList.add("show");
+                body.style.overflow = "hidden";
+            })
+            .catch(error => {
+                console.error("Error submitting form:", error);
+                // Reset button state
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHtml;
+                alert("Failed to send message. Please try copying my email directly.");
+            });
         });
     }
 
