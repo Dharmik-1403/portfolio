@@ -238,10 +238,12 @@ document.addEventListener("DOMContentLoaded", () => {
         experience: `
             <span class="text-accent">Work Experience History:</span><br>
             --------------------------------------------<br>
-            • <span class="text-info">IT Intern / ML Developer</span> | June 1, 2026 - June 30, 2026<br>
-              GUVNL (Gujarat Urja Vikas Nigam Limited) - IT Department<br>
-              Analyzed power grid load datasets and implemented regression ML models in Python.<br>
-              Developed and deployed the "Smart Energy Forecasting" system live using Streamlit and Netlify.
+            • <span class="text-info">IT Intern / ML Developer</span> | GUVNL | June 1, 2026 - June 30, 2026<br>
+              Analyzed power grid datasets and created time-series forecasting algorithms.<br>
+            • <span class="text-info">Software Intern</span> | Techstrota | Dec 1, 2025 - Dec 31, 2025<br>
+              Designed layout features and built frontend/backend application components.<br>
+            • <span class="text-info">Software Development Intern</span> | Arth Technology | Aug 1, 2022 - Dec 2022<br>
+              Assisted in database query designs, SQL maintenance, and Java/PHP setups.
         `,
         projects: `
             <span class="text-accent">Key Projects Showcase:</span><br>
@@ -358,6 +360,14 @@ I am Dharmik Gajjar, a dynamic and ambitious 2nd-year B.Tech Computer Science an
 * Analyzed power grid load datasets and implemented regression ML models in Python.
 * Developed and deployed an interactive forecasting system dashboard live using Streamlit and Netlify.
 
+### Software Intern | Techstrota
+* Dec 1, 2025 - Dec 31, 2025
+* Assisted in building frontend layouts, component configurations, and API integrations.
+
+### Software Development Intern | Arth Technology
+* Aug 1, 2022 - Dec 2022
+* Coded Java and PHP database update scripts and handled database querying.
+
 ---
 
 ## Projects
@@ -424,6 +434,12 @@ WORK EXPERIENCE:
 - IT Intern / ML Developer | GUVNL IT Department (1 June 2026 - 30 June 2026)
   - Coded regression machine learning models in Python for load data forecasting.
   - Built and deployed a web dashboard live using Streamlit and Netlify.
+- Software Intern | Techstrota (1 Dec 2025 - 31 Dec 2025)
+  - Assisted in designing user interfaces, layout styles, and software modules.
+  - Coded dynamic backend application logic and performed API configurations.
+- Software Development Intern | Arth Technology (1 Aug 2022 - Dec 2022)
+  - Wrote SQL queries and structured Java/PHP database interaction algorithms.
+  - Assisted in deploying functional updates and software updates.
 
 PROJECTS:
 1. Smart Energy Forecasting (Python, Machine Learning, Streamlit, Netlify)
