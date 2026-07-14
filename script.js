@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const themeToggleBtn = document.getElementById("theme-toggle");
     const body = document.body;
 
-    // Check saved theme or default to dark
-    const savedTheme = localStorage.getItem("portfolio-theme") || "dark-theme";
-    body.className = savedTheme;
+    // Always default to dark-theme on page load (per user request)
+    body.className = "dark-theme";
+    localStorage.setItem("portfolio-theme", "dark-theme");
 
     themeToggleBtn.addEventListener("click", () => {
         if (body.classList.contains("dark-theme")) {
