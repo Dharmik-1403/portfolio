@@ -661,37 +661,7 @@ body.light-theme .terminal-wrapper {
     caret-color: var(--accent-cyan);
 }
 
-.scroll-indicator {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-}
 
-.mouse-icon {
-    width: 26px;
-    height: 42px;
-    border: 2px solid var(--text-muted);
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    padding-top: 8px;
-    cursor: pointer;
-}
-
-.mouse-icon .wheel {
-    width: 4px;
-    height: 8px;
-    background: var(--text-muted);
-    border-radius: 2px;
-    animation: scroll-wheel 1.5s ease infinite;
-}
-
-@keyframes scroll-wheel {
-    0% { transform: translateY(0); opacity: 1; }
-    50% { transform: translateY(6px); opacity: 0.3; }
-    100% { transform: translateY(0); opacity: 1; }
-}
 
 /* -------------------------------------------------------------
    ABOUT ME SECTION
