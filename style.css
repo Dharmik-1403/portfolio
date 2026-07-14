@@ -888,7 +888,7 @@ body.light-theme .terminal-wrapper {
    ------------------------------------------------------------- */
 .skills-grid-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
 }
 
@@ -991,7 +991,7 @@ body.light-theme .filter-btn:hover, body.light-theme .filter-btn.active {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
 }
 
@@ -1645,5 +1645,35 @@ body.light-theme .footer {
     }
     .skills-grid-layout {
         grid-template-columns: 1fr;
+    }
+    .glass-panel {
+        padding: 20px;
+    }
+    .modal-content {
+        padding: 20px;
+        max-height: 90vh;
+    }
+    /* Slim down header actions to fit 320px screen widths nicely */
+    .logo {
+        font-size: 1.15rem;
+    }
+    .nav-actions {
+        gap: 10px;
+    }
+    .theme-toggle-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+    #download-cv-btn span {
+        display: none;
+    }
+    #download-cv-btn::before {
+        content: 'CV';
+        margin-right: 4px;
+    }
+    #download-cv-btn {
+        padding: 8px 12px;
+        font-size: 0.85rem;
     }
 }
