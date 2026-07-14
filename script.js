@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
         bio: `
             <span class="text-accent">Dharmik Gajjar - Bio Summary</span><br>
             --------------------------------------------<br>
-            I am a dynamic second-year B.Tech CSE (AI/ML) student at GSFC University.
+            I am a dynamic final-year B.Tech CSE (AI/ML) student at GSFC University.
             Passionate about coding, AI meal plan engines, databases, and cross-platform UI engineering.
             I focus on turning raw data parameters into structured backend scripts and sleek visuals.
         `,
@@ -341,7 +341,7 @@ document.addEventListener("DOMContentLoaded", () => {
 ---
 
 ## Professional Summary
-I am Dharmik Gajjar, a dynamic and ambitious 2nd-year B.Tech Computer Science and Engineering student at GSFC University, with a core specialization in Artificial Intelligence and Machine Learning (AI/ML). I am passionate about utilizing data to solve complex problems and build intelligent systems.
+I am Dharmik Gajjar, a dynamic and ambitious final-year B.Tech Computer Science and Engineering student at GSFC University, with a core specialization in Artificial Intelligence and Machine Learning (AI/ML). I am passionate about utilizing data to solve complex problems and build intelligent systems.
 
 ---
 
@@ -424,7 +424,7 @@ Contact:
 - GitHub: github.com/Dharmik-1403
 
 SUMMARY:
-I am Dharmik Gajjar, a dynamic and ambitious 2nd-year B.Tech Computer Science and Engineering student at GSFC University, specializing in AI/ML.
+I am Dharmik Gajjar, a dynamic and ambitious final-year B.Tech Computer Science and Engineering student at GSFC University, specializing in AI/ML.
 
 TECHNICAL SKILLS:
 - Languages: Java, Python, C++, HTML, CSS, JavaScript, PHP, SQL
